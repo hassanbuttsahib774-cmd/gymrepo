@@ -1,0 +1,87 @@
+.pricingSection {
+  background: #151515;
+}
+
+.psItem {
+  text-align: center;
+  padding: 40px 30px 52px;
+  border: 1px solid #464646;
+  transform: skewY(-4deg);
+  transition: all 0.5s;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.psItem:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.psItem:hover h3 {
+  color: #111111;
+}
+
+.psItem h3 {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transform: skewY(4deg);
+}
+
+.piPrice {
+  margin-bottom: 30px;
+  transform: skewY(4deg);
+}
+
+.piPrice h2 {
+  font-size: 60px;
+  color: #f36100;
+  font-weight: 600;
+}
+
+.piPrice span {
+  color: #c4c4c4;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.psItem ul {
+  margin-bottom: 40px;
+  transform: skewY(4deg);
+  list-style: none;
+  padding: 0;
+}
+
+.psItem ul li {
+  font-size: 14px;
+  color: #c4c4c4;
+  line-height: 32px;
+  list-style: none;
+}
+
+.pricingBtn {
+  display: block;
+  background: #333333;
+  transform: skewY(4deg);
+  text-decoration: none;
+}
+
+.thumbIcon {
+  font-size: 48px;
+  color: #f36100;
+  position: absolute;
+  left: 50px;
+  bottom: 120px;
+  transform: skewY(4deg);
+  opacity: 0;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+.psItem:hover .thumbIcon {
+  opacity: 1;
+  visibility: visible;
+}
+

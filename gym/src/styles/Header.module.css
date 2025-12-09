@@ -1,0 +1,214 @@
+/* Header styles - using global styles from style.css */
+/* Additional component-specific styles can be added here */
+
+.headerSection {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 15px;
+  padding-top: 55px;
+  z-index: 99;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.navMenu {
+  text-align: center;
+}
+
+.navMenu ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.navMenu ul li .dropdownMenu {
+  position: absolute;
+  left: -30px;
+  top: 58px;
+  width: 180px;
+  background: #252525;
+  z-index: 99;
+  text-align: left;
+  padding: 13px 0 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.navMenu ul li:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navMenu ul li.active > a {
+  color: #f36100;
+}
+
+.topOption {
+  text-align: right;
+  padding: 9px 0;
+}
+
+.toSearch {
+  display: inline-block;
+  padding-right: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toSocial {
+  display: inline-block;
+}
+
+.canvasOpen {
+  display: none;
+  cursor: pointer;
+}
+
+.offcanvasMenuOverlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.offcanvasMenuOverlay.active {
+  visibility: visible;
+}
+
+.offcanvasMenuWrapper {
+  position: fixed;
+  left: -300px;
+  top: 0;
+  width: 300px;
+  z-index: 999;
+  background: #ffffff;
+  overflow-y: auto;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  padding: 50px 30px 30px 30px;
+}
+
+.offcanvasMenuWrapper.show {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.canvasClose {
+  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #151515;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 27px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.canvasSearch {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.canvasMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.canvasMenu ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #151515;
+}
+
+.canvasSocial {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.searchModel {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  z-index: 99999;
+}
+
+.searchModelForm {
+  padding: 0 15px;
+}
+
+.searchModelForm input {
+  width: 500px;
+  font-size: 40px;
+  border: none;
+  border-bottom: 2px solid #333;
+  background: none;
+  color: #999;
+}
+
+.searchCloseSwitch {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 28px;
+  top: 30px;
+  cursor: pointer;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .canvasOpen {
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 61px;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 2px;
+    line-height: 29px;
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .navMenu {
+    display: none;
+  }
+  
+  .topOption {
+    display: none;
+  }
+}
+

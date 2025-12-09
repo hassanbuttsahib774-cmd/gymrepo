@@ -1,0 +1,53 @@
+.bannerSection {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.bsText {
+  text-align: center;
+}
+
+.bsText h2 {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.btTips {
+  font-size: 20px;
+  color: #c4c4c4;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+
+.primaryBtn {
+  display: inline-block;
+  font-size: 14px;
+  padding: 17px 30px 16px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #f36100;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.primaryBtn:hover {
+  background: #f36100;
+  color: #ffffff;
+}
+
+.btnNormal {
+  transition: all 0.3s;
+}
+

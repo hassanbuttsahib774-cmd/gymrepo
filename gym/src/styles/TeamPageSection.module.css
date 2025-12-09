@@ -1,0 +1,83 @@
+.teamSection {
+  background: #151515;
+}
+
+.teamPage {
+  padding-bottom: 70px;
+}
+
+.teamTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.teamTitle .sectionTitle {
+  text-align: left;
+}
+
+.appoinmentBtn {
+  background: transparent;
+  border: 2px solid #f36100;
+  margin-top: 10px;
+}
+
+.tsItem {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.tsItem:hover .tsText {
+  bottom: -30px;
+}
+
+.tsText {
+  padding: 40px 0 60px;
+  text-align: center;
+  background: #0a0a0a;
+  border-top: 4px solid #464646;
+  transform: skewY(-5deg);
+  position: absolute;
+  left: 0;
+  bottom: -250px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.tsText h4 {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 14px;
+  transform: skewY(5deg);
+}
+
+.tsText span {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  transform: skewY(5deg);
+}
+
+.ttSocial {
+  transform: skewY(5deg);
+  margin-top: 13px;
+}
+
+.ttSocial a {
+  font-size: 14px;
+  color: #c4c4c4;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.ttSocial a:last-child {
+  margin-right: 0;
+}
+

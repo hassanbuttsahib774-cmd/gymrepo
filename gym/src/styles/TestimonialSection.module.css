@@ -1,0 +1,70 @@
+.testimonialSection {
+  background: #151515;
+}
+
+.tsSlider {
+  position: relative;
+}
+
+.tsItem {
+  text-align: center;
+}
+
+.tiPic {
+  margin-bottom: 32px;
+}
+
+.tiPic img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tiText p {
+  color: #fefefe;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.tiText h5 {
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ttRating {
+  margin-top: 10px;
+}
+
+.ttRating i {
+  font-size: 12px;
+  color: #d49d09;
+  margin-right: 3px;
+}
+
+.sliderDots {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sliderDots button {
+  height: 4px;
+  width: 20px;
+  background: #5c5c5c;
+  margin-right: 15px;
+  transform: skewY(-5deg);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sliderDots button.active {
+  background: #f36100;
+}
+
+.sliderDots button:last-child {
+  margin-right: 0;
+}
+

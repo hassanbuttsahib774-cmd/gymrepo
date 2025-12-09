@@ -1,0 +1,179 @@
+/* Blog Section Styles - using global styles from style.css */
+/* Additional component-specific styles */
+
+.blogSection {
+  background: #151515;
+}
+
+.blogItem {
+  margin-bottom: 40px;
+  display: flex;
+  overflow: hidden;
+}
+
+.biPic {
+  float: left;
+}
+
+.biPic img {
+  width: 360px;
+  height: 240px;
+  min-width: 100%;
+}
+
+.biText {
+  border: 1px solid #363636;
+  overflow: hidden;
+  height: 240px;
+  padding: 32px 30px 0 30px;
+  flex: 1;
+}
+
+.biText h5 a {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.biText ul {
+  margin-bottom: 18px;
+  list-style: none;
+  padding: 0;
+}
+
+.biText ul li {
+  font-size: 12px;
+  color: #888888;
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+}
+
+.biText p {
+  color: #c4c4c4;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+
+.blogPagination {
+  padding-top: 10px;
+}
+
+.blogPagination a {
+  display: inline-block;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-right: 15px;
+  background: #252525;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.blogPagination a:hover {
+  background: #555555;
+}
+
+.sidebarOption {
+  padding-left: 40px;
+}
+
+.soCategories .title,
+.soLatest .title,
+.soTags .title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.soCategories ul {
+  list-style: none;
+  padding: 0;
+}
+
+.soCategories ul li a {
+  font-size: 14px;
+  color: #c4c4c4;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.latestLarge {
+  height: 200px;
+  position: relative;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.llText {
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+  width: 100%;
+  padding: 0 25px;
+}
+
+.llText h5 a {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.latestItem {
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.liPic {
+  float: left;
+  margin-right: 20px;
+}
+
+.liText h6 a {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 21px;
+  text-decoration: none;
+}
+
+.liTime {
+  display: inline-block;
+  font-size: 12px;
+  color: #888888;
+}
+
+.soTags a {
+  display: inline-block;
+  font-size: 14px;
+  color: #c4c4c4;
+  padding: 10px 15px;
+  background: #252525;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .sidebarOption {
+    padding-left: 0;
+    padding-top: 30px;
+  }
+  
+  .blogItem {
+    flex-direction: column;
+  }
+  
+  .biText {
+    height: auto;
+  }
+}
+

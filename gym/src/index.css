@@ -1,0 +1,5 @@
+/* Reset default Vite styles - using global.css instead */
+body {
+  margin: 0;
+  padding: 0;
+}

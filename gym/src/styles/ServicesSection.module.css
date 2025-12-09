@@ -1,0 +1,47 @@
+.servicesSection {
+  background: #151515;
+}
+
+.ssPic img {
+  height: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+
+.ssText {
+  background: #252525;
+  padding: 72px 30px;
+  height: 293px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.ssText:hover {
+  background: #363636;
+}
+
+.ssText h4 {
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.ssText p {
+  margin-bottom: 11px;
+}
+
+.ssText a {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.ssText:hover a {
+  color: #f36100;
+}
+
