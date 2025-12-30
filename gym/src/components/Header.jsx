@@ -6,7 +6,7 @@ import styles from '../styles/Header.module.css';
 import logo from '../assets/img/logo.png'; // adjust ../ depending on location of Header.jsx
 // Use placeholder logo if actual logo doesn't exist
 // const logo = 'https://via.placeholder.com/150/ffffff/f36100?text=LOGO';
-
+import Login from '../pages/Login';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
           <div className="row">
             <div className="col-lg-3">
               <div className={styles.logo}>
-                <Link to="/">
+                <Link to="/Login">
                   <img src={logo} alt="Gym Logo" />
                   {/* <img src="img/logo.png" alt="Gym Logo" /> */}
 

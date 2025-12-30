@@ -11,8 +11,13 @@
   z-index: 99;
 }
 
+/* Logo text style */
 .logo a {
   display: inline-block;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
 }
 
 .navMenu {
@@ -25,6 +30,61 @@
   margin-right: 32px;
   position: relative;
   z-index: 1;
+}
+
+/* Main menu link text style */
+.navMenu ul li a {
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+/* Hover and active text color */
+.navMenu ul li:hover > a {
+  color: #f36100;
+}
+.navMenu ul li.active > a {
+  color: #f36100;
+}
+
+/* Decorative underline for main menu */
+.navMenu ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22px;
+  height: 1px;
+  width: 100%;
+  background: #f36100;
+  opacity: 0;
+  transform: rotate(-20deg);
+  transition: all 0.3s;
+  margin: -9px 0px;
+}
+.navMenu ul li:hover > a:after,
+.navMenu ul li.active > a:after {
+  opacity: 1;
+}
+
+/* Dropdown menu text */
+.navMenu ul li .dropdownMenu li a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* Dropdown hover effect */
+.navMenu ul li .dropdownMenu li a:hover {
+  color: #f36100;
 }
 
 .navMenu ul li .dropdownMenu {
@@ -55,15 +115,28 @@
   padding: 9px 0;
 }
 
+/* Top option icons text */
 .toSearch {
   display: inline-block;
   padding-right: 20px;
   position: relative;
   cursor: pointer;
+  color: #ffffff;
+}
+.toSearch i {
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .toSocial {
   display: inline-block;
+}
+.toSocial a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 15px;
+  text-decoration: none;
 }
 
 .canvasOpen {
@@ -139,6 +212,19 @@
   border-bottom: 1px solid #151515;
 }
 
+/* Canvas menu text */
+.canvasMenu ul li a {
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.canvasMenu ul li a:hover {
+  color: #f36100;
+}
+
 .canvasSocial {
   text-align: center;
   padding-top: 20px;
@@ -159,6 +245,7 @@
   padding: 0 15px;
 }
 
+/* Search input text */
 .searchModelForm input {
   width: 500px;
   font-size: 40px;
@@ -211,4 +298,3 @@
     display: none;
   }
 }
-

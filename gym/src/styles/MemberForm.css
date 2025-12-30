@@ -1,0 +1,77 @@
+.member-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #FE9900;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.member-form input,
+.member-form select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.member-form button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: #fcf7f7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.member-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.member-table th,
+.member-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.member-table th {
+  background: #1a1919;
+}
+
+.member-table button {
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete {
+  background: #ebe9e9;
+  color: #e42121;
+}
+
+.active {
+  color: green;
+  font-weight: bold;
+}
+
+.inactive {
+  color: red;
+  font-weight: bold;
+}

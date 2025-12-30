@@ -1,0 +1,59 @@
+.trainer-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #FE9900;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.trainer-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.trainer-form button {
+  padding: 10px 16px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.trainer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trainer-table th,
+.trainer-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.trainer-table th {
+  background: #111111;
+}
+
+.trainer-table button {
+  margin-right: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete {
+  background: #dc3545;
+  color: #fff;
+}

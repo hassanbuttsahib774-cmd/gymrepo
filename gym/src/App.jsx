@@ -9,12 +9,15 @@ import Blog from './pages/Blog';
 import BMI from './pages/BMI';
 import Classes from './pages/Classes';
 import NotFound from './pages/NotFound';
-
+import Login from './pages/Login';
+import Admin from './pages/Admin';
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<Login/>}/>
+        <Route path='/Admin' element={<Admin/>}/>
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/team" element={<Team />} />
