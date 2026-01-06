@@ -1,0 +1,65 @@
+.dietplan-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #FE9900;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dietplan-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dietplan-form select,
+.dietplan-form input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.meal-inputs > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.meal-inputs input[type="number"] {
+  margin-top: 3px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  width: 150px;
+}
+
+button.delete {
+  background: #dc3545;
+}
+
+.dietplan-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dietplan-table th,
+.dietplan-table td {
+  border: 1px solid #d1bfbf;
+  padding: 10px;
+  text-align: center;
+}
+
+.dietplan-table th {
+  background: #0e0c0c;
+  color: #fff;
+}
