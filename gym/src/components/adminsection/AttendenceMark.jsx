@@ -1,14 +1,7 @@
 import { useState } from "react";
-// import "./AttendanceMark.css";
-import '../../styles/AttendenceMark.css';
+import "../../styles/AttendenceMark.css";
 
-const AttendanceMark = () => {
-  const membersList = [
-    { id: 1, name: "Ali" },
-    { id: 2, name: "Ahmed" },
-    { id: 3, name: "Sara" },
-  ];
-
+const AttendanceMark = ({ members }) => {
   const [date, setDate] = useState("");
   const [attendance, setAttendance] = useState({});
   const [records, setRecords] = useState([]);
@@ -19,16 +12,24 @@ const AttendanceMark = () => {
 
   const markAll = (status) => {
     const all = {};
-    membersList.forEach((m) => (all[m.id] = status));
+    members.forEach((m) => {
+      all[m.id] = status;
+    });
     setAttendance(all);
   };
 
   const saveAttendance = () => {
-    const dailyRecord = membersList.map((m) => ({
+    if (!date) {
+      alert("Please select a date");
+      return;
+    }
+
+    const dailyRecord = members.map((m) => ({
       name: m.name,
-      status: attendance[m.id] || "Absent",
       date,
+      status: attendance[m.id] || "Absent",
     }));
+
     setRecords([...records, ...dailyRecord]);
     setAttendance({});
   };
@@ -69,30 +70,33 @@ const AttendanceMark = () => {
             <th>Status</th>
           </tr>
         </thead>
+
         <tbody>
-          {membersList.map((m) => (
-            <tr key={m.id}>
-              <td>{m.name}</td>
-              <td>
-                <button
-                  className={
-                    attendance[m.id] === "Present" ? "present" : ""
-                  }
-                  onClick={() => markStatus(m.id, "Present")}
-                >
-                  Present
-                </button>
-                <button
-                  className={
-                    attendance[m.id] === "Absent" ? "absent" : ""
-                  }
-                  onClick={() => markStatus(m.id, "Absent")}
-                >
-                  Absent
-                </button>
-              </td>
+          {members.length === 0 ? (
+            <tr>
+              <td colSpan="2">No members available</td>
             </tr>
-          ))}
+          ) : (
+            members.map((m) => (
+              <tr key={m.id}>
+                <td>{m.name}</td>
+                <td>
+                  <button
+                    className={attendance[m.id] === "Present" ? "present" : ""}
+                    onClick={() => markStatus(m.id, "Present")}
+                  >
+                    Present
+                  </button>
+                  <button
+                    className={attendance[m.id] === "Absent" ? "absent" : ""}
+                    onClick={() => markStatus(m.id, "Absent")}
+                  >
+                    Absent
+                  </button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
 
@@ -101,7 +105,7 @@ const AttendanceMark = () => {
         <button onClick={exportCSV}>Export Attendance</button>
       </div>
 
-      <h3>Monthly Attendance Report</h3>
+      <h3>Attendance Report</h3>
       <table className="report-table">
         <thead>
           <tr>
@@ -110,6 +114,7 @@ const AttendanceMark = () => {
             <th>Status</th>
           </tr>
         </thead>
+
         <tbody>
           {records.map((r, i) => (
             <tr key={i}>

@@ -1,9 +1,7 @@
 import { useState } from "react";
-// import "./MemberForm.css";
-import '../../styles/MemberForm.css';
+import "../../styles/MemberForm.css";
 
-const MemberForm = () => {
-  const [members, setMembers] = useState([]);
+const MemberForm = ({ members, setMembers }) => {
   const [search, setSearch] = useState("");
   const [form, setForm] = useState({
     id: null,
@@ -18,17 +16,21 @@ const MemberForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (form.id === null) {
       setMembers([...members, { ...form, id: Date.now() }]);
     } else {
       setMembers(members.map((m) => (m.id === form.id ? form : m)));
     }
+
     setForm({ id: null, name: "", email: "", status: "Active" });
   };
 
   const handleEdit = (member) => setForm(member);
-  const handleDelete = (id) =>
+
+  const handleDelete = (id) => {
     setMembers(members.filter((m) => m.id !== id));
+  };
 
   const filteredMembers = members.filter((m) =>
     m.name.toLowerCase().includes(search.toLowerCase())
@@ -47,6 +49,7 @@ const MemberForm = () => {
           onChange={handleChange}
           required
         />
+
         <input
           type="email"
           name="email"
@@ -55,10 +58,12 @@ const MemberForm = () => {
           onChange={handleChange}
           required
         />
+
         <select name="status" value={form.status} onChange={handleChange}>
           <option value="Active">Active</option>
           <option value="Inactive">Inactive</option>
         </select>
+
         <button type="submit">
           {form.id ? "Update" : "Add"} Member
         </button>
@@ -81,6 +86,7 @@ const MemberForm = () => {
             <th>Actions</th>
           </tr>
         </thead>
+
         <tbody>
           {filteredMembers.map((member) => (
             <tr key={member.id}>
@@ -100,6 +106,12 @@ const MemberForm = () => {
               </td>
             </tr>
           ))}
+
+          {filteredMembers.length === 0 && (
+            <tr>
+              <td colSpan="4">No members found</td>
+            </tr>
+          )}
         </tbody>
       </table>
     </div>
